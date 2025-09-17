@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f0f2f5;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #4caf50, #81c784);
+    padding: 15px 0;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+header .container-header {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+header nav a:hover {
+    color: #ffeb3b;
+}
+
+/* Sections */
+section {
+    max-width: 1100px;
+    margin: 120px auto 40px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.8s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Cadastro */
+#cadastro form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#cadastro input {
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+#cadastro button {
+    padding: 15px;
+    background: linear-gradient(90deg, #4caf50, #81c784);
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#cadastro button:hover {
+    background: linear-gradient(90deg, #43a047, #66bb6a);
+}
+
+.success {
+    color: green;
+    margin-top: 10px;
+}
+
+/* Destaques */
+.destaques-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.destaque {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.destaque:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.destaque img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.destaque p .antigo {
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 5px;
+}
+
+/* Carrossel */
+.carrossel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.carrossel {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    gap: 20px;
+}
+
+.produto {
+    min-width: 220px;
+    background: #fff;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.produto img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.5s;
+}
+
+.produto:hover img {
+    transform: scale(1.1);
+}
+
+.produto h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.produto p {
+    color: #4caf50;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.produto button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #4caf50, #81c784);
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.produto button:hover {
+    background: linear-gradient(90deg, #43a047, #66bb6a);
+}
+
+.carrossel-btn {
+    background: #4caf50;
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.carrossel-btn:hover {
+    background: #43a047;
+}
+
+/* Botão voltar ao topo */
+#topBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 15px 20px;
+    background: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+#topBtn:hover {
+    background: #43a047;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+}
